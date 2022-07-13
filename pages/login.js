@@ -24,7 +24,7 @@ export default function Login() {
 
     
       <div className="container">
-        <div clasName="row">
+        <div className="row">
           <div className="col 6">
             <form action="/action_page.php">
               <div className="mb-3 mt-3">
