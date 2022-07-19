@@ -1,7 +1,9 @@
 import React from 'react'
+// import styles from '../styles/footercom.module.css'
 export default function FooterComp() {
   return (
-    <div className="style {{ background-color: '#262626';}}">
+    <div className="containerfluid">
+      <div className='style={{backgroundColor: "lightblue"}}'>
     <footer className="py-5">
     <div className="row">
       <div className="col-2"> 
@@ -42,7 +44,7 @@ export default function FooterComp() {
           <h5>Subscribe to our newsletter</h5>
           <p>Monthly digest of whats new and exciting from us.</p>
           <div className="d-flex w-100 gap-2">
-            <label ForHtml="newsletter1" className="visually-hidden">Email address</label>
+            <label htmlFor="newsletter1" className="visually-hidden">Email address</label>
             <input id="newsletter1" type="text" className="form-control" placeholder="Email address"/>
             <button className="btn btn-primary" type="button">Subscribe</button>
           </div>
@@ -68,6 +70,7 @@ export default function FooterComp() {
       </ul>
     </div>
   </footer>
+  </div>
   </div>
     )
 }

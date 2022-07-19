@@ -21,8 +21,8 @@ function NavComp() {
                                         <link href="/"></link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="login">Login</a>
-                                        <link href="login.js"></link>
+                                        <a className="nav-link" href="appointment">Appointment</a>
+                                        <link href="appointment.js"></link>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href="register">Register</a>
@@ -41,13 +41,14 @@ function NavComp() {
                         </div>
                     </nav>
                 </div>
-                <div className='text-center'>
+                   <div className='text-center'>
                     <h1>Avani Parlor</h1>
                     <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
                     <Image src="/images/logo.jpg" alt='Logo' height={120} width={120} />
                 </div>
+                </div>
             </div>
-        </div>
+            
     )
 }
 

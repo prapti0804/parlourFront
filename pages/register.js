@@ -14,70 +14,55 @@ export default function register() {
                 <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
                 <label htmlhtmlFor="floatingPassword">Password</label>
             </div> */}
-        <form>
-          <div className="row mb-3">
-            <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">Email</label>
-            <div className="col-sm-10">
-              <input type="email" className="form-control" id="inputEmail3" />
-            </div>
-          </div>
-          <div className="row mb-3">
-            <label htmlFor="inputPassword3" className="col-sm-2 col-form-label">Password</label>
-            <div className="col-sm-10">
-              <input type="password" className="form-control" id="inputPassword3" />
-            </div>
-          </div>
-          <div className="row mb-3">
-            <label htmlFor="inputaadress" className="col-sm-2 col-form-label">address</label>
-            <div className="col-sm-10">
-            <textarea className="form-control" id="address" rows="3"></textarea>
-            </div>
-          </div>
-          <div className="row mb-3">
-            <label htmlFor="inputbdate" className="col-sm-2 col-form-label">Birth Date</label>
-            <div className="col-sm-10">
-            <input type="date" className="form-control" id="Bday" rows="3"></input>
-            </div>
-          </div>
-          <fieldset className="row mb-3">
-            <legend className="col-form-label col-sm-2 pt-0">Gender</legend>
-            <div className="col-sm-10">
-              <div className="form-check">
-                <input className="form-check-input" type="radio" name="gender" id="female" value="option1" checked />
-                <label className="form-check-label" htmlFor="gridRadios1">
-                  Female
-                </label>
-              </div>
-              <div className="form-check">
-                <input className="form-check-input" type="radio" name="gender" id="male" value="option2" />
-                <label className="form-check-label" htmlFor="gridRadios2">
-                  Male
-                </label>
-              </div>
-              <div className="form-floating m">
-                <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
-                  <option selected>Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                <label htmlhtmlFor="floatingSelect">Works with selects</label>
-              </div>
-            </div>
-          </fieldset>
-          <div className="row mb-3">
-            <div className="col-sm-10 offset-sm-2">
-              <div className="form-check">
-                <input className="form-check-input" type="checkbox" id="gridCheck1" />
-                <label className="form-check-label" htmlFor="gridCheck1">
-                  Example checkbox
-                </label>
-              </div>
-            </div>
-          </div>
-          <button type="submit" className="btn btn-primary">Sign in</button>
-        </form>
+            <div className="page-header">
+        <div className="container">
+            
+        </div>
+    </div>
+    <div className="content">
+        <div className="container">
+            <div className="row">
+                <div className="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div className="widget widget-contact">
 
+                        {/* <!-- widget search --> */}
+                        <h3 className="widget-title">Contact Info</h3>
+                        <address>
+                            <strong>Address.</strong>
+                            <br/> Nivrutti Nager,Vadgoan bk,Pune
+                           <br/>
+                            <br/>
+                            <abbr title="Phone">Phone:</abbr> 
+                        </address>
+                        <address>
+                            <strong>Email</strong>avaniparlor@gmail.com
+                            <br/>
+                        </address>
+                         <address>
+                            <strong>Timing</strong>10:00am TO 9:00pm
+                            <br/>
+                          
+                        </address>
+
+                </div>
+                <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div className="row">
+                        <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            
+                          
+                    <div className="well-block">
+                        
+                        <h1></h1>
+                        <h5 className="small-title ">best experience ever</h5>
+                        <p>Our main focus is on quality and hygiene. Our Parlour is well equipped with advanced technology equipments and provides best quality services. Our staff is well trained and experienced, offering advanced services in Skin, Hair and Body Shaping that will provide you with a luxurious experience that leave you feeling relaxed and stress free. The specialities in the parlour are, apart from regular bleachings and Facials, many types of hairstyles, Bridal and cine make-up and different types of Facials and fashion hair colourings.</p>
+                         </div>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
       </div>
     </div>
   )
