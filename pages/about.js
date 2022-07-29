@@ -48,13 +48,13 @@ export default function register() {
                 <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            
                           
                     <div className="well-block">
-                        
-                        <h1></h1>
+                    <h1>About Us</h1>
                         <h5 className="small-title ">best experience ever</h5>
                         <p>Our main focus is on quality and hygiene. Our Parlour is well equipped with advanced technology equipments and provides best quality services. Our staff is well trained and experienced, offering advanced services in Skin, Hair and Body Shaping that will provide you with a luxurious experience that leave you feeling relaxed and stress free. The specialities in the parlour are, apart from regular bleachings and Facials, many types of hairstyles, Bridal and cine make-up and different types of Facials and fashion hair colourings.</p>
+                          
+                        
                          </div>
                 </div>
                         </div>

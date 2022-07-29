@@ -25,12 +25,16 @@ function NavComp() {
                                         <link href="appointment.js"></link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="register">Register</a>
-                                        <link herf="register.js"></link>
+                                        <a className="nav-link" href="about">About Us </a>
+                                        <link herf="about.js"></link>
                                     </li>
                                     <li className="nav-item">
                                         <a className="nav-link" href="offer">Offers</a>
                                         <link href="offer.js"></link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <a className="nav-link" href="admin_login">Admin</a>
+                                        <link href="admin_login.js"></link>
                                     </li>
                                 </ul>
                                 <form className="d-flex">
@@ -41,7 +45,7 @@ function NavComp() {
                         </div>
                     </nav>
                 </div>
-                   <div className='text-center'>
+                   <div className='text-center bg-Secondry'>
                     <h1>Avani Parlor</h1>
                     <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
                     <Image src="/images/logo.jpg" alt='Logo' height={120} width={120} />

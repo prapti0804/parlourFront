@@ -11,28 +11,17 @@ export default function Login() {
     console.log(user);
   }, [user]);
   return (
-    <div>
-      {/* //     <div style={{ color: "blue" }}>
-        //         User email <input type="text" id="uname" placeholder="jenny123@gmail.com" onChange={e => setUser(e.target.value)} value={user} />
-        //         <br />
-        //         Password <input type="text" id="pwd" onChange={e => setPwd(e.target.value)} value={pwd} />
-        //         <p>
-        //         { user}
-        //         </p>
-
-        //     </div> */}
-
-    
+    <div> 
       <div className="container">
-                      
+       <div>               
         <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <div className="row">
                         <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h1>Appointment Form</h1>
-                            <p> Book your appointment to save salon rush.</p>
+                            <h1 className='text-center'>Appointment Form</h1>
+                            <p className='text-center'> Book your appointment to save salon rush.</p>
                             <form method="post">
                                 <div className="row">
-                                    <div className="col-md-6">
+                                    <div className="col-md-12 ">
                                         <label className="control-label"htmlFor="name">Name</label>
                                         <input type="text" className="form-control" id="name" placeholder="Name" name="name" required="true"/>
                                     </div>
@@ -65,7 +54,7 @@ export default function Login() {
                                     </div>
                                     <div className="col-md-12">
                                         <div className="form-group">
-                                            <button type="submit" id="submit" name="submit" className="btn btn-default">Book</button>
+                                            <button type="submit" id="submit" name="submit" className="btn btn-primary">Book</button>
                                         </div>
                                     </div>
                                 </div>
@@ -73,6 +62,7 @@ export default function Login() {
                         </div>
                     </div>
                 </div>
+      </div>
       </div>
     </div>
   )

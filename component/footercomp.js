@@ -2,7 +2,8 @@ import React from 'react'
 // import styles from '../styles/footercom.module.css'
 export default function FooterComp() {
   return (
-    <div className="containerfluid">
+    <div style={{ color: 'blue', backgroundcolor: 'red', padding: 20 }}>
+    <div className="container-fluid bg-dark">
       <div className='style={{backgroundColor: "lightblue"}}'>
     <footer className="py-5">
     <div className="row">
@@ -53,23 +54,10 @@ export default function FooterComp() {
     </div>
 
     <div className="d-flex justify-content-between py-4 my-4 border-top">
-      <p>&copy; 2021 Company, Inc. All rights reserved.</p>
-      <ul className="list-unstyled d-flex">
-        <li className="ms-3"><a className="link-dark" href="#">
-            <svg className="bi" width="24" height="24">
-            <use xlinkhref="#twitter"/></svg></a>
-        </li>
-        <li className="ms-3"><a className="link-dark" href="#">
-            <svg className="bi" width="24" height="24">
-                <use xlinkhref="#instagram"/></svg></a>
-        </li>
-        <li className="ms-3"><a className="link-dark" href="#">
-            <svg className="bi" width="24" height="24">
-                <use xlinkhref="#facebook"/></svg></a>
-        </li>
-      </ul>
+      <p>&copy; 2022  Avani Parlor. All rights reserved@avaniparlor.</p>
     </div>
   </footer>
+  </div>
   </div>
   </div>
     )
