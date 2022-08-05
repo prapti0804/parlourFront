@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 export default function offer() {
     return (
-        <div className='container'>
+        <div className='container bg-success p-2 text-dark bg-opacity-10'>
             <div className="row row-cols-1 row-cols-md-2 g-4">
                 <div className="col">
                     <div className="card">

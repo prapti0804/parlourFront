@@ -2,34 +2,32 @@ import React from 'react'
 // import styles from '../styles/footercom.module.css'
 export default function FooterComp() {
   return (
-    <div style={{ color: 'blue', backgroundcolor: 'red', padding: 20 }}>
+    <div style={{ color: 'gray', backgroundcolor: 'red', padding: 20 }}>
     <div className="container-fluid bg-dark">
       <div className='style={{backgroundColor: "lightblue"}}'>
     <footer className="py-5">
     <div className="row">
-      <div className="col-2"> 
+      <div className="col-3"> 
         <h5>Section</h5>
         <ul className="nav flex-column">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
+          <li className="nav-item mb-2"><a href="" className="nav-link p-0 text-muted">Home</a></li>
+          <li className="nav-item mb-2"><a href="appointments.js" className="nav-link p-0 text-muted">APPOINTMENT</a></li>
+          <li className="nav-item mb-2"><a href="about.js" className="nav-link p-0 text-muted">ABOUT US</a></li>
+          <li className="nav-item mb-2"><a href="offers.js" className="nav-link p-0 text-muted">OFFERS</a></li>
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
         </ul>
       </div>
 
-      <div className="col-2">
+      <div className="col-3">
         <h5>Section</h5>
-        <ul className="nav flex-column">
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Features</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Pricing</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
-          <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
-        </ul>
+        <p>
+          <h4>Avani Beauty Parlour</h4><br/>
+          Nivrutti Nagar,Vadgoan Bk.,Pune 41<br/>
+          avaniparlor@gmail.com
+        </p>
       </div>
 
-      <div className="col-2">
+      {/* <div className="col-2">
         <h5>Section</h5>
         <ul className="nav flex-column">
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">Home</a></li>
@@ -38,7 +36,7 @@ export default function FooterComp() {
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">FAQs</a></li>
           <li className="nav-item mb-2"><a href="#" className="nav-link p-0 text-muted">About</a></li>
         </ul>
-      </div>
+      </div> */}
 
       <div className="col-4 offset-1">
         <form>
@@ -53,8 +51,8 @@ export default function FooterComp() {
       </div>
     </div>
 
-    <div className="d-flex justify-content-between py-4 my-4 border-top">
-      <p>&copy; 2022  Avani Parlor. All rights reserved@avaniparlor.</p>
+    <div className="d-flex justify-content-between py-1 my-2 border-top">
+      <p>&copy; All rights reserved@avaniparlor website created by Prapti Patil</p>
     </div>
   </footer>
   </div>

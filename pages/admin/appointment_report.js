@@ -1,6 +1,6 @@
 import React from 'react'
 
-const appoinment_report = () => {
+const appointment_report = () => {
     return (
         <div className='container'>
            
@@ -11,7 +11,7 @@ const appoinment_report = () => {
                             <div className="form-body">
                                 <form method="post" name="bwdatesreport" action="bwdates-reports-details.php">
                                     {/* enctype="multipart/form-data"> */}
-                                    <p style={{ fontSize: "16px", color: "red" }} align="center"> </p>
+                                    <p style={{fontSize: "16px", color: "red"}} align="center"> </p>
 
 
                                     <div className="col-mb-3">
@@ -25,7 +25,7 @@ const appoinment_report = () => {
 
 
 
-                                    <button type="submit" name="submit" className="btn btn-Primary">Get report</button>
+                                    <button type="submit" name="submit" className="btn btn-primary">Get report</button>
                                 </form>
                             </div>
 
@@ -39,4 +39,4 @@ const appoinment_report = () => {
     )
 }
 
-export default appoinment_report;
+export default appointment_report;
