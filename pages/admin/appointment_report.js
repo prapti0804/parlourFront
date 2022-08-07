@@ -9,8 +9,7 @@ const appointment_report = () => {
                         <h3 className="title1">Between dates reports</h3>
                         <div className="form-grids row widget-shadow" data-example-id="basic-forms">
                             <div className="form-body">
-                                <form method="post" name="bwdatesreport" action="bwdates-reports-details.php">
-                                    {/* enctype="multipart/form-data"> */}
+                                <form method="post" name="bwdatesreport" action="">
                                     <p style={{fontSize: "16px", color: "red"}} align="center"> </p>
 
 
@@ -22,9 +21,6 @@ const appointment_report = () => {
                                         <label htmlFor="formGroupExampleInput2" className="form-label">to Date</label>
                                         <input type="date" className="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder" />
                                     </div>
-
-
-
                                     <button type="submit" name="submit" className="btn btn-primary">Get report</button>
                                 </form>
                             </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const admin_index = () => {
+const addServices = () => {
     return (
         <div className='container'>
             <div id="page-wrapper">
@@ -38,4 +38,4 @@ const admin_index = () => {
     )
 }
 
-export default admin_index
+export default addServices; 

@@ -1,41 +1,49 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/Link';
 
 function NavComp() {
     return (
         <div>
             <div className="container-fluid">
                 <div>
-                    
-                    <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+
+                    <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top custom_nav-container">
                         <div className="container-fluid bg-dark">
+                            <Link href="index.js">
                                 <a className="navbar-brand">Logo</a>
-                                <link href="index.js">
-                            </link>
+                            </Link>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse" id="mynavbar">
                                 <ul className="navbar-nav me-auto">
-                                    <li className="nav-item">              
-                                        <a className="nav-link">Home</a>
-                                        <link href="/"></link>
+                                    <li className="nav-item">
+                                        <Link href="/">
+                                            <a className="nav-Link">Home</a>
+                                        </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="appointment">Appointment</a>
-                                        <link href="appointment.js"></link>
+                                        <Link href="appointment">
+                                            <a className="nav-Link">Appointment</a>
+                                        </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="about">About Us </a>
-                                        <link herf="about.js"></link>
+                                        <Link href="about">
+                                            <a className="nav-Link">About Us </a>   
+                                        </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="offer">Offers</a>
-                                        <link href="offer.js"></link>
+                                        <Link href="offer">
+                                            <a className="nav-Link">Offers</a>
+
+                                        </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link" href="login">Login</a>
-                                        <link href="login.js"></link>
+                                        <Link href="login">
+                                            <a className="nav-Link">Login</a>
+
+                                        </Link>
                                     </li>
                                 </ul>
                                 <form className="d-flex bg-denger">
@@ -48,14 +56,14 @@ function NavComp() {
                 </div>
                 <div className='bg-success p-2 text-dark bg-opacity-10' >
                     <div className='text-center'>
-                    <h1>Avani Parlor</h1>
-                    <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
-                    <Image src="/images/logo.jpg" alt='Logo' height={120} width={120} />
-                </div>
-                </div>
+                        <h1>Avani Parlor</h1>
+                        <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
+                        <Image src="/images/logo.jpg" alt='Logo' height={120} width={120} />
+                    </div>
                 </div>
             </div>
-            
+        </div>
+
     )
 }
 

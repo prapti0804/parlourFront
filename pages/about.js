@@ -1,19 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
-import 'bootstrap/dist/css/bootstrap.css';
 
 export default function register() {
     return (
         <div>
             <div className="container bg-success p-2 text-dark bg-opacity-10">
-                {/* <div className="form-floating mb-3"> */}
-                {/* <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
+                <div className="form-floating mb-3">
+                <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
                 <label htmlhtmlFor="floatingInput">Email address</label>
             </div>
             <div className="form-floating lg=3">
                 <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
                 <label htmlhtmlFor="floatingPassword">Password</label>
-            </div> */}
+            </div>
                 <div className="page-header bg-success p-2 text-dark bg-opacity-10">
                     <div className="container">
                      <h1>Aout us</h1>
@@ -25,7 +24,7 @@ export default function register() {
                             
                                 <div className="widget widget-contact col-lg-5 col-md-5 col-sm-8 col-xs-12">
 
-                                    {/* <!-- widget search --> */}
+                                    
                                     <h3 className="widget-title">Contact Info</h3>
                                     <address>
                                         <strong>Address.</strong>

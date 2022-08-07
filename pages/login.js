@@ -80,6 +80,6 @@ function Login(props) {
     </section>
   )
 }
-login.propTypes={}
+Login.propTypes={}
 
 export default Login;
