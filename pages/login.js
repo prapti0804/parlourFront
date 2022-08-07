@@ -57,6 +57,9 @@ function Login(props) {
 
   return (
     <section className='vh-80'>
+      <div>
+    <div className="container bg-success p-2 text-dark bg-opacity-10">
+      <div className='row'>
       <div className='container bg-success p-2 text-dark bg-opacity-10'>
         <form onSubmit={handleSubmit(handleLogin, handleError)}>
           <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12">
@@ -77,7 +80,11 @@ function Login(props) {
             <button type="submit" className="btn btn-primary btn-lg btn-block">Sign in</button> 
           </div>
         </form>
+      
       </div>
+     </div>
+     </div>
+    </div>
     </section>
   )
 }

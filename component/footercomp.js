@@ -2,10 +2,10 @@ import React from 'react'
 // import styles from '../styles/footercom.module.css'
 export default function FooterComp() {
   return (
-    <div style={{ color: 'gray', backgroundcolor: 'red', padding: 20 }}>
+    <div style={{ color: 'gray', padding: 20 }}>
       <div className="container-fluid bg-dark">
         <footer className="py-5">
-          <div style={{ backgroundColor: "lightblue" }}>
+          <div style={{ backgroundColor: "dark" }}>
             <div className="row">
               <div className="col-3">
                 <h5>Section</h5>

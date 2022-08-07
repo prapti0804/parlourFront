@@ -67,6 +67,7 @@ export default function Appointment() {
                             </div>
                         </div>
                     </div>
+                    <Image src="/images/appoin.jpg" alt="appointment pic" className='border border-dark' height={400} width={350}/>
 
                 </div>
             </div>

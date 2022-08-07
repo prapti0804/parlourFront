@@ -6,6 +6,7 @@ function NavComp() {
     return (
         <div>
             <div className="container-fluid">
+                
                 <div>
 
                     <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top custom_nav-container">
@@ -20,28 +21,28 @@ function NavComp() {
                                 <ul className="navbar-nav me-auto">
                                     <li className="nav-item">
                                         <Link href="/">
-                                            <a className="nav-Link">Home</a>
+                                            <a className="nav-Link navbar-brand">Home </a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link href="appointment">
-                                            <a className="nav-Link">Appointment</a>
+                                            <a className="nav-Link navbar-brand">Appointment</a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link href="about">
-                                            <a className="nav-Link">About Us </a>   
+                                            <a className="nav-Link navbar-brand">About Us </a>   
                                         </Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link href="offer">
-                                            <a className="nav-Link">Offers</a>
+                                            <a className="nav-Link navbar-brand">Offers</a>
 
                                         </Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link href="login">
-                                            <a className="nav-Link">Login</a>
+                                            <a className="nav-Link navbar-brand">Login</a>
 
                                         </Link>
                                     </li>
@@ -54,12 +55,13 @@ function NavComp() {
                         </div>
                     </nav>
                 </div>
-                <div className='bg-success p-2 text-dark bg-opacity-10' >
+                <div className='p-2 text-white bg-opacity-25 border border-info bg-danger' >
                     <div className='text-center'>
-                        <h1>Avani Parlor</h1>
+                        <h1>Avani Parlour</h1>
                         <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
-                        <Image src="/images/logo.jpg" alt='Logo' height={120} width={120} />
+                        <Image src="/images/header.jpg" alt='Logo' height={120} width={220} />
                     </div>
+                    
                 </div>
             </div>
         </div>
@@ -67,4 +69,4 @@ function NavComp() {
     )
 }
 
-export default NavComp;
+export default NavComp; 
