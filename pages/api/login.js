@@ -4,7 +4,7 @@ import {login} from "../../routes";
 export default async function handeler(req, res) {
 
     if (req.method == "POST") {
-        const data = await JSON.stringify(res.body);
+        const data = await JSON.stringify(req.body);
         const responce = await fetch(`${backend}${login}`, {
             method: 'POST',
             body: data,

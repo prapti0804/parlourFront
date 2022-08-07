@@ -12,6 +12,7 @@ function Login(props) {
   const router = useRouter();
 
   const handleLogin = async (data) => {
+    console.log(data);
     const response = await fetch("/api/login", {
       method: 'POST',
       body: JSON.stringify({
@@ -30,11 +31,11 @@ function Login(props) {
 
 
     if (responseData['role'] === 'customer')
-      router.push('/donor/dashboard')
+      router.push('/')
     else if (responseData['role'] === 'employee')
       router.push('/recipient/dashboard')
     else if (responseData['role'] === 'admin')
-      router.push('/admin/dashboard')
+      router.push('/admin/')
   }
 
   const registerOptions = {
