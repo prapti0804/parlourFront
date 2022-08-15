@@ -1,6 +1,6 @@
 const login ='/user/login';
-const register = '/user/register';
+const registerRoute = '/user/register';
 
 export {
-    login, register
+    login, registerRoute
 }
