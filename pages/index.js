@@ -11,12 +11,14 @@ export default function Home() {
             <div className="row row-cols-1 row-cols-md-2 g-4">
                 <div className="col">
                     <div className="card">
-                        <Image src="/images/service1.jpg" className="card-img-top" alt="service1" height={300} width={200} />
+                        <Image src="/images/service1.jpg" className="card-img-top border border-warning" alt="service1" height={300} width={200} />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <Link href="appointment.js">
-                                <a href="appointment" className="btn btn-primary">Fix Appointment</a>
+                            <h5 className="card-title text-dark">Hair Treatment</h5>
+                            <p className="card-text text-dark">
+                            Hair treatments generally refer to any means of managing common hair related problems such as hair fall, dryness, dandruff, frizzy hair, thinning hair, and so on. The treatments vary in terms of the problem you are suffering from because different ingredients and elements are required to tackle them.
+                            </p>
+                            <Link href="appointment">
+                                <a  className="btn btn-primary">Fix Appointment</a>
 
                             </Link>
                         </div>
@@ -24,12 +26,14 @@ export default function Home() {
                 </div>
                 <div className="col">
                     <div className="card">
-                        <Image src="/images/service2.jpg" className="card-img-top" alt="service2" height={300} width={200} />
+                        <Image src="/images/service2.jpg" className="card-img-top border border-warning" alt="service2" height={300} width={200} />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <Link href="appointment.js">
-                                <a href="appointment" className="btn btn-primary">Fix Appointment</a>
+                            <h5 className="card-title text-dark">Facial</h5>
+                            <p className="card-text text-dark">
+                            A basic facial is a skin treatment used to clean pores, remove dead skin cells, and treat common skin concerns like acne, dark circles, and wrinkles and other signs of aging. Modern facial treatments are a surefire way to get smooth, supple skin and improve your general appearance.
+                            </p>
+                            <Link href="appointment">
+                                <a  className="btn btn-primary">Fix Appointment</a>
 
                             </Link>
                         </div>
@@ -37,12 +41,14 @@ export default function Home() {
                 </div>
                 <div className="col">
                     <div className="card">
-                        <Image src="/images/service3.jpg" className="card-img-top" alt="service3" height={300} width={200} />
+                        <Image src="/images/service3.jpg" className="card-img-top border border-warning" alt="service3" height={300} width={200} />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                            <Link href="appointment.js">
-                                <a href="appointment" className="btn btn-primary">Fix Appointment</a>
+                            <h5 className="card-title text-dark">Pedicure</h5>
+                            <p className="card-text text-dark">
+                            A pedicure is a treatment that is used to cleanse and groom feet and toenails. In this treatment, the dead skin cells on the bottom of the feet are scraped away. This technique also massages the foot muscles, which relaxes them. The nails are then shaped to the desired length and shape.
+                                </p>
+                            <Link href="appointment">
+                                <a  className="btn btn-primary">Fix Appointment</a>
 
                             </Link>
                         </div>
@@ -50,12 +56,14 @@ export default function Home() {
                 </div>
                 <div className="col">
                     <div className="card">
-                        <Image src="/images/service4.jpg" className="card-img-top" alt="service4" height={300} width={200} />
+                        <Image src="/images/service5.jpg" className="card-img-top border border-warning" alt="service4" height={300} width={200} />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <Link href="appointment.js">
-                                <a href="appointment" className="btn btn-primary">Fix Appointment</a>
+                            <h5 className="card-title text-dark">bridal makeup</h5>
+                            <p className="card-text text-dark">
+                            Bridal packages will mostly include hair, makeup and draping, which means they will help you do your bridal makeup, your bridal hairstyle and help you drape your saree or wedding trousseau. Professionals also help put on your wedding jewellery at the makeup venue, if you are going for costume jewellery.
+                                </p>
+                            <Link href="appointment">
+                                <a  className="btn btn-primary">Fix Appointment</a>
 
                             </Link>
                         </div>

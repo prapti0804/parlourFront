@@ -9,53 +9,19 @@ export default function offer() {
             <div className="row row-cols-1 row-cols-md-2 g-4">
                 <div className="col">
                     <div className="card">
-                        <Image src="/images/service1.jpg" className="card-img-top" alt="service1" height={300} width={200} />
+                        <Image src="/images/service4.jpg" className="card-img-top border border-warning" alt="service1" height={300} width={200} />
                         <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <h5 className="card-title text-warning">Spa</h5>
+                            <p className="card-text text-dark">
+                            Relaxation spas are also referred to as pampering spas or pampering and relaxation spas. As these names suggest, stress and tension relief are the aims of these venues, which offer prescription massages, body scrubs, hydrotherapy treatments and thermal therapies to help guests escape lifes worries
+                            </p>
                             <Link href="appointment">
                                 <a className="btn btn-primary">Fix Appointment</a>
                             </Link>
                         </div>
                     </div>
                 </div>
-                <div className="col">
-                    <div className="card">
-                        <Image src="/images/service2.jpg" className="card-img-top" alt="service2" height={300} width={200} />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <Link href="appointment">
-                                <a className="btn btn-primary">Fix Appointment</a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                        <Image src="/images/service3.jpg" className="card-img-top" alt="service3" height={300} width={200} />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                            <Link href="appointment">
-                                <a className="btn btn-primary">Fix Appointment</a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col">
-                    <div className="card">
-                        <Image src="/images/service4.jpg" className="card-img-top" alt="service4" height={300} width={200} />
-                        <div className="card-body">
-                            <h5 className="card-title">Card title</h5>
-                            <p className="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <Link href="appointment">
-                                <a className="btn btn-primary">Fix Appointment</a>
-                            </Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div>        
         </div>
     )
 }
