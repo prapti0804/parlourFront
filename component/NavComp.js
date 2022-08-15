@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/Link';
-
+import Link from 'next/link';
+ 
 function NavComp() {
     return (
         <div>
