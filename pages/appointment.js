@@ -45,7 +45,7 @@ function Appointment(props) {
                                         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div className="form-group">
                                                 <label className="control-label" htmlFor="textarea">Appointment Date</label>
-                                                <input type="date" className="form-control appointment_date" placeholder="Date" name="adate" id='adate' required={true} />
+                                                <input type="date" className="form-control appointment_date" placeholder="Date" name="adate" id='adate' min={new Date().toISOString().split('T')[0]} required={true} />
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
