@@ -43,13 +43,14 @@ const index = (props) => {
 
 export async function getServerSideProps(context) {
   const response = await fetch(`${backend}${allAppointments}`, {
-    method: 'GET',
+    method: 'POST',
     headers: {
       'Authorization': context.req.cookies['jwt'],
       'Content-Type': 'application/json'
     }
   });
   let data = await response.json();
+
   return {
     props: data,
   }
