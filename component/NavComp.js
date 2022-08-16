@@ -30,18 +30,18 @@ function NavComp() {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="about">
+                                        <Link href="/about">
                                             <a className="nav-Link navbar-brand">About Us </a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="offer">
+                                        <Link href="/offer">
                                             <a className="nav-Link navbar-brand">Offers</a>
 
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="login">
+                                        <Link href="/login">
                                             <a className="nav-Link navbar-brand">Login</a>
 
                                         </Link>
