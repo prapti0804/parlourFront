@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
- 
+
 function NavComp() {
     return (
         <div>
             <div className="container-fluid">
-                
+
                 <div>
 
                     <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top custom_nav-container">
@@ -31,7 +31,7 @@ function NavComp() {
                                     </li>
                                     <li className="nav-item">
                                         <Link href="about">
-                                            <a className="nav-Link navbar-brand">About Us </a>   
+                                            <a className="nav-Link navbar-brand">About Us </a>
                                         </Link>
                                     </li>
                                     <li className="nav-item">
@@ -61,7 +61,7 @@ function NavComp() {
                         <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
                         <Image src="/images/header.jpg" alt='Logo' height={120} width={220} />
                     </div>
-                    
+
                 </div>
             </div>
         </div>

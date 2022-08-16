@@ -5,7 +5,7 @@ import Head from 'next/head';
 import backend from '../config';
 import { allServices } from '../routes'
 
-function Appointment(props) {
+function appointment(props) {
     return (
         <div>
             <Head>
@@ -85,4 +85,4 @@ export async function getServerSideProps(context) {
     }
 }
 
-export default Appointment
+export default appointment

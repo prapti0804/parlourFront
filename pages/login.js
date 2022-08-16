@@ -33,7 +33,7 @@ function Login(props) {
     if (responseData['role'] === 'customer')
       router.push('/')
     else if (responseData['role'] === 'employee')
-      router.push('/recipient/dashboard')
+      router.push('/beautician/')
     else if (responseData['role'] === 'admin')
       router.push('/admin/')
   }
