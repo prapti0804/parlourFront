@@ -6,9 +6,7 @@ function NavComp() {
     return (
         <div>
             <div className="container-fluid">
-
                 <div>
-
                     <nav className="navbar navbar-expand-sm navbar-dark bg-dark sticky-top custom_nav-container">
                         <div className="container-fluid bg-dark">
                             <Link href="index.js">
@@ -43,7 +41,6 @@ function NavComp() {
                                     <li className="nav-item">
                                         <Link href="/login">
                                             <a className="nav-Link navbar-brand">Login</a>
-
                                         </Link>
                                     </li>
                                 </ul>
@@ -61,11 +58,9 @@ function NavComp() {
                         <p>Nivrutti Nager B1,Vadgaon Budruk,Pune</p>
                         <Image src="/images/header.jpg" alt='Logo' height={120} width={220} />
                     </div>
-
                 </div>
             </div>
         </div>
-
     )
 }
 

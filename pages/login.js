@@ -25,9 +25,9 @@ function Login(props) {
     }
     );
     const responseData = await response.json();
-    cookieCutter.set('jwt', responseData['jwt'])
-    cookieCutter.set('name', responseData['name'])
-    cookieCutter.set('role', responseData['role'])
+    cookieCutter.set('jwt', responseData['jwt'], { expires: new Date(Date.now() + 86400) });
+    cookieCutter.set('name', responseData['name'], { expires: new Date(Date.now() + 86400) });
+    cookieCutter.set('role', responseData['role'], { expires: new Date(Date.now() + 86400) });
 
 
     if (responseData['role'] === 'customer')
@@ -83,7 +83,7 @@ function Login(props) {
             </div>
           </div>
         </div>
-        </div>
+      </div>
     </section>
   )
 }

@@ -2,13 +2,33 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { register, handleSubmit, useForm } from 'react-hook-form';
+import cookieCutter from 'cookie-cutter';
 
 
 import backend from '../config';
-import { allServices } from '../routes'
+import { bookAppointment, allServices } from '../routes'
 
 function Appointment(props) {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
+
+    const handleRegistration = async (data) => {
+
+        const response = await fetch(`${backend}${bookAppointment}`, {
+            method: 'POST',
+            body: JSON.stringify({
+                appointment: {
+                    date: data.adate,
+                    time: data.atime,
+                    services: [data.services]
+                }
+            }),
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': cookieCutter.get('jwt')
+            }
+        });        
+    };
+
     const handleError = (errors) => { };
     const registerOptions = {
         name: {
@@ -32,10 +52,10 @@ function Appointment(props) {
                 message: "Invalid Address"
             }
         },
-        phone:{
+        phone: {
             required: "Phone number required",
             pattern: {
-                value: /[0-9]/,
+                value: /[0-9]{10}/,
                 message: "Invalid COntact Number"
             }
         }
@@ -53,7 +73,7 @@ function Appointment(props) {
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h1 className='text-center'>Appointment Form</h1>
                                 <p className='text-center'> Book your appointment to save salon rush.</p>
-                                <form method="post">
+                                <form onSubmit={handleSubmit(handleRegistration, handleError)}>
                                     <div className="row">
                                         <div className="col-md-12 ">
                                             <label className="control-label" htmlFor="name">Name</label>
@@ -64,11 +84,11 @@ function Appointment(props) {
                                         </div>
                                         <div className="col-md-6">
                                             <label className="control-label" htmlFor="phone">phone</label>
-                                            <input type="text" className="form-control" id="phone" name="phone" placeholder="Phone" required={true} length="10" pattern="[0-9]+" />
+                                            <input type="text" className="form-control" id="phone" name="phone" placeholder="Phone" length="10"  {...register('phone', registerOptions.phone)} />
                                         </div>
                                         <div className="col-md-6">
                                             <label className="control-label" htmlFor="email">email</label>
-                                            <input type="email" className="form-control" id="appointment_email" placeholder="Email" name="email" required={true} />
+                                            <input type="email" className="form-control" id="appointment_email" placeholder="Email" name="email" {...register('email', registerOptions.email)} />
                                         </div>
                                         <div className="col-md-6">
                                             <label className="control-label" htmlFor="Subject">Services</label>
@@ -83,13 +103,13 @@ function Appointment(props) {
                                         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div className="form-group">
                                                 <label className="control-label" htmlFor="textarea">Appointment Date</label>
-                                                <input type="date" className="form-control appointment_date" placeholder="Date" name="adate" id='adate' min={new Date().toISOString().split('T')[0]} required={true} />
+                                                <input type="date" className="form-control appointment_date" placeholder="Date" name="adate" id='adate' min={new Date().toISOString().split('T')[0]} required={true} {...register('adate', registerOptions.adate)} />
                                             </div>
                                         </div>
                                         <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
                                             <div className="form-group">
                                                 <label className="control-label" htmlFor="textarea">Appointment Time</label>
-                                                <input type="time" className="form-control appointment_time" placeholder="Time" name="atime" id='atime' required={true} />
+                                                <input type="time" className="form-control appointment_time" placeholder="Time" name="atime" id='atime' required={true} {...register('atime', registerOptions.atime)} />
                                             </div>
                                         </div>
                                         <div className="col-md-12">

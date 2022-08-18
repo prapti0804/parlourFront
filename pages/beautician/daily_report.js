@@ -2,7 +2,7 @@ import React from 'react'
 
 function daily_report() {
   return (
-    <div className='container'>daily_report
+    <div className='container'>daily report
 
 
 

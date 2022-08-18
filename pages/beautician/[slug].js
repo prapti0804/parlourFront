@@ -3,7 +3,7 @@ import backend from "../../config";
 
 function appointmentointmentDetails(props) {
     return (
-        <div className='container'>daily_report
+        <div className='container'>Daily Report
             <table className="table table-bordered">
                 <tbody>
                     <tr>
@@ -31,8 +31,6 @@ function appointmentointmentDetails(props) {
                     </tr>
                 </tbody>
             </table>
-
-
         </div>
     )
 }

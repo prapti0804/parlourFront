@@ -11,7 +11,7 @@ const AddServices = () => {
 
     const handleRegistration = async (data) => {
         const allData = new FormData();
-        allData.append("image", data.file[0], "s.png");
+        allData.append("image", data.file[0], "p.png");
         allData.append("name", data.name);
         allData.append("description", data.description);
         allData.append("cost", data.cost);
