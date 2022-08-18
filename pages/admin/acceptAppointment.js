@@ -3,7 +3,9 @@ import Link from 'next/link';
 import backend from '../../config';
 
 function AcceptAppointment(props) {
-  console.log(props);
+  const accept=()=>{
+
+  }
   return (
     <table className=' container table table-bordered'>
     <thead>
@@ -36,8 +38,8 @@ function AcceptAppointment(props) {
               {app.appointment.time}
             </td>
             <td>
-                  <button type="submit" id="submit" name="submit" className="btn btn-primary">Accepted</button>
-                  <button type="submit" id="submit" name="submit" className="btn btn-danger">Rejected</button>
+                  <button type="button" id="submit" name="Accept" className="btn btn-primary">Accept</button>
+                  <button type="button" id="submit" name="Reject" className="btn btn-danger">Reject</button>
             </td>
           </tr>
        );
@@ -51,9 +53,9 @@ function AcceptAppointment(props) {
 export async function getServerSideProps(context) {
   
   const response = await fetch(`${backend}/admin/appointments`, {
-    method: 'GET',
+    method: 'POST',
     headers: {
-      'Authorization': context.req.cookies['jwt'],
+      'Authorization': await context.req.cookies['jwt'],
       'Content-Type': 'application/json'
     }
   });

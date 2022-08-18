@@ -25,7 +25,7 @@ function NavComp() {
                                         </Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link href="appointment">
+                                        <Link href="/appointment">
                                             <a className="nav-Link navbar-brand">Appointment</a>
                                         </Link>
                                     </li>
