@@ -1,48 +1,62 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Link from 'next/link';
 import backend from '../../config';
+import cookieCutter from 'cookie-cutter';
 
 function AcceptAppointment(props) {
+  const [data, setData] = useState(props.data);
+  const accept = async (id) => {
+    const response = await fetch(`${backend}/admin/confirmappointment`, {
+      method: 'POST',
+      body:JSON.stringify({"id":id}),
+      headers: {
+        'Authorization': cookieCutter.get('jwt'),
+        'Content-Type': 'application/json'
+      }
+    });
+    let d= await response.json();
+    setData(d.data);
+  }
   return (
     <table className=' container table table-bordered'>
-    <thead>
-      <tr>
-        <td>Sr.No</td>
-        <td>Name</td>
-        <td>email</td>
-        <td>Appointment-Date</td>
-        <td>Appointment-Time</td>
-        <td>Status</td> 
-      </tr>
-    </thead>
-    <tbody>
-      {props.data.map((app, i) => {
-        return (
-          <tr key={i}>
-            <td>
-              {i + 1}
-            </td>
-            <td>
-              {app.user.name}
-            </td>
-            <td> 
-              {app.user.email}
-            </td>
+      <thead>
+        <tr>
+          <td>Sr.No</td>
+          <td>Name</td>
+          <td>email</td>
+          <td>Appointment-Date</td>
+          <td>Appointment-Time</td>
+          <td>Status</td>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((app, i) => {
+          return (
+            <tr key={i}>
+              <td>
+                {i + 1}
+              </td>
+              <td>
+                {app.user.name}
+              </td>
+              <td>
+                {app.user.email}
+              </td>
 
-            <td>{app.appointment.date}
-            </td>
-            <td>
-              {app.appointment.time}
-            </td>
-            <td>
-                  <button type="button" id="submit" name="Accept" className="btn btn-primary">Accept</button>
-                  <button type="button" id="submit" name="Reject" className="btn btn-danger">Reject</button>
-            </td>
-          </tr>
-       );
-      })} 
-    </tbody>
-  </table>
+              <td>{app.appointment.date}
+              </td>
+              <td>
+                {app.appointment.time}
+              </td>
+              <td>
+                <button type="button" id={app.appointment._id} name="Accept" onClick={e=>accept(e.target.id)} className="btn btn-primary">Accept</button>
+                <button type="button" id={app.appointment._id} name="Reject" onClick={e=>accept(e.target.id)} className="btn btn-danger">Reject</button>
+              </td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   )
 }
 
@@ -55,7 +69,6 @@ export async function getServerSideProps(context) {
     }
   });
   let data = await response.json();
-  console.log(data);
   return {
     props: data,
   }
