@@ -50,7 +50,7 @@ export async function getServerSideProps(context) {
     }
   });
   let data = await response.json();
-
+  console.log(data);
   return {
     props: data,
   }

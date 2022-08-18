@@ -1,11 +1,46 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
+import { register, handleSubmit, useForm } from 'react-hook-form';
+
 
 import backend from '../config';
 import { allServices } from '../routes'
 
-function appointment(props) {
+function Appointment(props) {
+    const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
+    const handleError = (errors) => { };
+    const registerOptions = {
+        name: {
+            required: "name is required",
+            pattern: {
+                value: /^[a-zA-Z ]+$/,
+                message: "Invalid name. only character values allowed."
+            }
+        },
+        email: {
+            required: "Email is required",
+            pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "invalid email address"
+            }
+        },
+        address: {
+            required: "Address is required",
+            pattern: {
+                value: /[a-zA-Z0-9 ]/,
+                message: "Invalid Address"
+            }
+        },
+        phone:{
+            required: "Phone number required",
+            pattern: {
+                value: /[0-9]/,
+                message: "Invalid COntact Number"
+            }
+        }
+    };
+
     return (
         <div>
             <Head>
@@ -22,7 +57,10 @@ function appointment(props) {
                                     <div className="row">
                                         <div className="col-md-12 ">
                                             <label className="control-label" htmlFor="name">Name</label>
-                                            <input type="text" className="form-control" id="name" placeholder="Name" name="name" required={true} />
+                                            <input type="text" className="form-control" id="name" placeholder="Name" name="name" required={true} {...register('name', registerOptions.name)} />
+                                            <small className="text-danger">
+                                                {errors?.name && errors.name.message}
+                                            </small>
                                         </div>
                                         <div className="col-md-6">
                                             <label className="control-label" htmlFor="phone">phone</label>
@@ -34,7 +72,7 @@ function appointment(props) {
                                         </div>
                                         <div className="col-md-6">
                                             <label className="control-label" htmlFor="Subject">Services</label>
-                                            <select name="services" id="services" required={true} className="form-control">
+                                            <select name="services" id="services" required={true} className="form-control" {...register('services', registerOptions.services)}>
                                                 <option value="" disabled selected>Select Services</option>
                                                 {props.services.map((service, index) => {
                                                     return (<option value={service.name} key={service._id}>{service.name}</option>)
@@ -85,4 +123,4 @@ export async function getServerSideProps(context) {
     }
 }
 
-export default appointment
+export default Appointment;

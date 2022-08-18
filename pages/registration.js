@@ -82,7 +82,7 @@ function Registration() {
             <i className="fas fa-times"></i> &nbsp;Registration Failed. User may already exist.
           </div> : <></>}
           <div className="form-group">
-            <label htmlFor="name" className="form-label mt-4">Email address</label>
+            <label htmlFor="name" className="form-label mt-4">Name</label>
             <input type="text" className="form-control" id="name" placeholder="Enter Name" {...register('name', registerOptions.name)} />
             <small className="text-danger">{errors?.name && errors.name.message}</small>
           </div>
