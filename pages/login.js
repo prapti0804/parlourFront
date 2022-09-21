@@ -58,10 +58,11 @@ function Login(props) {
   return (
     <section className='vh-80'>
       <div className="container bg-success p-2 text-dark bg-opacity-10">
-        <div className='col col-12 col-md-12 '>
+        {/* <div className='col col-12 col-md-12 '> */}
           <div className='row'>
-            <div className='container bg-success p-2 text-dark bg-opacity-10'>
+            <div className=' bg-success p-2 text-dark bg-opacity-10'>
               <form onSubmit={handleSubmit(handleLogin, handleError)}>
+                
                 <div className="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                   <div className="form-floating mb-3 ">
                     <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"  {...register('email', registerOptions.email)} />
@@ -82,7 +83,7 @@ function Login(props) {
               </form>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </section>
   )

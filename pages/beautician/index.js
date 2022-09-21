@@ -5,6 +5,7 @@ import backend from '../../config'
 import { allAppointments } from '../../routes'
 const index = (props) => {
   return (
+    
     <table className=' container table table-bordered'>
       <thead>
         <tr key={1}>
@@ -19,6 +20,7 @@ const index = (props) => {
       <tbody>
         {props.data.map((app, i) => {
           return (
+            
             <tr key={i}>
               <td>{i + 1}</td>
               <td>{app.user.name}</td>

@@ -24,14 +24,14 @@ export default function register() {
                                         <br /> Nivrutti Nager,Vadgoan bk,Pune
                                         <br />
                                         <br />
-                                        <abbr title="Phone">Phone:</abbr>
+                                        <abbr title="Phone">Phone: 9370603456</abbr>
                                     </address>
                                     <address>
-                                        <strong>Email</strong>avaniparlor@gmail.com
+                                        <strong>Email :</strong>avaniparlor@gmail.com
                                         <br />
                                     </address>
                                     <address>
-                                        <strong>Timing</strong>10:00am TO 9:00pm
+                                        <strong>Timing :</strong>10:00am TO 9:00pm
                                         <br />
 
                                     </address>

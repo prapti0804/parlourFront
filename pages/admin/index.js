@@ -9,28 +9,29 @@ const index = () => {
                     <div className="col-6">
                         <div className="p-4 border bg-success p-2 text-white bg-opacity-75">
                             <Link href='admin/add_services'>
-                                <a >Services</a>
+                                <a className='link link-light h3' >Services</a>
                             </Link>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="p-4 border bg-info p-2 text-white bg-opacity-75">
                             <Link href='admin/add_beautition'>
-                                <a>Beautition</a>
+                                <a className='link link-light h3'>Beautition</a>
                             </Link>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="p-4 border bg-danger p-2 text-white bg-opacity-75">
-                            <Link href='admin/customer_details'>
-                                <a >Customer</a>
+                            <Link href='admin/acceptAppointment'>
+                                <a className='link link-light h3'>Appointments</a>
                             </Link>
                         </div>
                     </div>
                     <div className="col-6">
                         <div className="p-4 border bg-warning p-2 text-white bg-opacity-75">
                             <Link href='admin/appointment_report'>
-                                <a >Report</a>
+                                <a className='link link-light h3'>Report</a>
+                               
                             </Link>
                         </div>
                     </div>

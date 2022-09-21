@@ -114,7 +114,7 @@ function Appointment(props) {
                                         </div>
                                         <div className="col-md-12">
                                             <div className="form-group">
-                                                <button type="submit" id="submit" name="submit" className="btn btn-primary">Book</button>
+                                                <button type="submit" id="submit" name="submit" className="btn btn-primary">Book Appointment</button>
                                             </div>
                                         </div>
                                     </div>

@@ -5,7 +5,7 @@ function add_beautition() {
     <div className='container'>
       <div className="main-page">
         <div className="forms">
-          <h3 className="title1">Admin Profile</h3>
+          <h3 className="title1">Beautition Profile</h3>
           <div className="form-grids row widget-shadow" data-example-id="basic-forms">
             <div className="form-title">
               <h4>Update Profile :</h4>
