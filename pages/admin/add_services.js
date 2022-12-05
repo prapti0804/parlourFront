@@ -60,13 +60,13 @@ const AddServices = (props) => {
               <div className='row'>
               <h3 className="title1 mt-5 section-title font-alt align-center">Available Services</h3>
 
-              <div class="col-lg-12 col-md-12 mb-lg-50">
-						<ul class="list-style-2">						
+              <div className="col-lg-12 col-md-12 mb-lg-50">
+						<ul className="list-style-2">						
 					
             {props.services.map((service, index) => {
                                                     return (
 
-                                                    <li className='col-md-4'>{service.name} 
+                                                    <li key={service._id} className='col-md-4'>{service.name} 
                                                    
                                                       </li> 
                                                     )
