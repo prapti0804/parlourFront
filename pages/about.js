@@ -3,55 +3,51 @@ import Image from 'next/image';
 
 export default function register() {
     return (
-        <div>
-            <div className="container bg-success p-2 text-dark bg-opacity-10">
-            
-                {/* <div className="page-header bg-success p-2 text-dark bg-opacity-10">
-                    <div className="container">
-                     <h1>Aout us</h1>
-                    </div>
-                </div> */}
-                <div className="content">
-                    <div className="container col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <div className="row">
-                            
-                                <div className="widget widget-contact col-lg-5 col-md-5 col-sm-8 col-xs-12">
+        <>
+        <section class="page-section">
+			<div class="container align-center">
+				<div class="row mb-50">
+					<div class="col-md-4 mb-md-20 news-right">
+						<div class="news-item alt-2 small">
+							<div class="news-media">
+								<img src="/images/img-13.jpg" data-at2x="images/news/img-13@2x.jpg" alt />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="news-item alt-2">
+							<div class="news-media">
+								<img src="/images/img-14.jpg" data-at2x="images/news/img-14@2x.jpg" alt />
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 news-left">
+						<div class="news-item alt-2 small">
+							<div class="news-media">
+								<img src="/images/img-15.jpg" data-at2x="images/news/img-15@2x.jpg" alt />
+							</div>
+						</div>
+					</div>
+				</div>
 
-                                    
-                                    <h1 className="widget-title">Contact Info</h1>
-                                    <address>
-                                        <strong>Address.</strong>
-                                        <br /> Nivrutti Nager,Vadgoan bk,Pune
-                                        <br />
-                                        <br />
-                                        <abbr title="Phone">Phone: 9370603456</abbr>
-                                    </address>
-                                    <address>
-                                        <strong>Email :</strong>avaniparlor@gmail.com
-                                        <br />
-                                    </address>
-                                    <address>
-                                        <strong>Timing :</strong>10:00am TO 9:00pm
-                                        <br />
-
-                                    </address>
-
-                                </div>
-                                <div className="col-lg-5 col-md-5 col-sm-8 col-xs-12">
-                                    <div className="well-block">
-                                        <h1>About Us</h1>
-                                        <h5 className="small-title ">best experience ever</h5>
-                                        <p>Our main focus is on quality and hygiene. Our Parlour is well equipped with advanced technology equipments and provides best quality services. Our staff is well trained and experienced, offering advanced services in Skin, Hair and Body Shaping that will provide you with a luxurious experience that leave you feeling relaxed and stress free. The specialities in the parlour are, apart from regular bleachings and Facials, many types of hairstyles, Bridal and cine make-up and different types of Facials and fashion hair colourings.</p>
-
-
-                                    </div>
-                                </div>
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+				<h3 class="section-title bottom-line long font-alt">Welcome To Relish<span>Loveliness Producers</span></h3>
+				<div class="col-md-10 col-md-offset-1 mb-30">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate ante vitae lacus dignissim condimentum vitae at . Sednonde magna pulvinar, sollicitudin turpis quis, elementum massa. Vivamus ut accumsan massa, mollis viverra est. Aliquam blandit non nulla ac dignissim. Integer venenatis</p>
+				</div>
+				<div class="title-under font-alt">
+					<h3>Best For You</h3>
+					<div class="img-line">
+						<img src="/images/img-line-40.png" data-at2x="images/lines/img-line-26@2x.png" alt />
+					</div>
+					<h3>Leading Experts</h3>
+					<div class="img-line">
+						<img src="/images/img-line-40.png" data-at2x="images/lines/img-line-26@2x.png" alt />
+					</div>
+					<h3>Care About You</h3>
+				</div>
+			</div>
+		</section>
+        </>
 
     )
 

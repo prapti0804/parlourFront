@@ -8,11 +8,9 @@ import { login } from '../routes';
 function Login(props) {
   const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
   const handleError = (errors) => { };
-  const [role, setRole] = useState('');
   const router = useRouter();
 
   const handleLogin = async (data) => {
-    console.log(data);
     const response = await fetch("/api/login", {
       method: 'POST',
       body: JSON.stringify({
@@ -25,10 +23,10 @@ function Login(props) {
     }
     );
     const responseData = await response.json();
+    console.log(responseData);
     cookieCutter.set('jwt', responseData['jwt'], { expires: new Date(Date.now() + 86400) });
     cookieCutter.set('name', responseData['name'], { expires: new Date(Date.now() + 86400) });
     cookieCutter.set('role', responseData['role'], { expires: new Date(Date.now() + 86400) });
-
 
     if (responseData['role'] === 'customer')
       router.push('/')
@@ -57,6 +55,7 @@ function Login(props) {
 
   return (
     <section className='vh-80'>
+
       <div className="container bg-success p-2 text-dark bg-opacity-10">
         {/* <div className='col col-12 col-md-12 '> */}
           <div className='row'>

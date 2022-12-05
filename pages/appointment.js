@@ -7,10 +7,21 @@ import cookieCutter from 'cookie-cutter';
 
 import backend from '../config';
 import { bookAppointment, allServices } from '../routes'
+import Link from 'next/link';
+
+
 
 function Appointment(props) {
     const { register, handleSubmit, formState: { errors } } = useForm({ mode: "onChange" });
+    const [login, setLogin] = useState(true);
+    const [service, setService] = useState([]);
+    const [status, setStatus] = useState(0);
 
+    useEffect(()=>{
+        if(cookieCutter.get('jwt') !== "" || cookieCutter.get('jwt') !== undefined || cookieCutter.get('jwt') !== null){
+            setLogin(false);
+        }
+    },[]);
     const handleRegistration = async (data) => {
 
         const response = await fetch(`${backend}${bookAppointment}`, {
@@ -19,39 +30,23 @@ function Appointment(props) {
                 appointment: {
                     date: data.adate,
                     time: data.atime,
-                    services: [data.services]
+                    services: service
                 }
             }),
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': cookieCutter.get('jwt')
             }
-        });        
+         
+                }
+                
+                );  
+                const responseData = await response.json();
+                setStatus(responseData.status);      
     };
 
     const handleError = (errors) => { };
     const registerOptions = {
-        name: {
-            required: "name is required",
-            pattern: {
-                value: /^[a-zA-Z ]+$/,
-                message: "Invalid name. only character values allowed."
-            }
-        },
-        email: {
-            required: "Email is required",
-            pattern: {
-                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "invalid email address"
-            }
-        },
-        address: {
-            required: "Address is required",
-            pattern: {
-                value: /[a-zA-Z0-9 ]/,
-                message: "Invalid Address"
-            }
-        },
         phone: {
             required: "Phone number required",
             pattern: {
@@ -61,60 +56,118 @@ function Appointment(props) {
         }
     };
 
+    const checkServices = (e,isChecked) =>{
+        if(isChecked)
+        {    setService([...service,e]);
+        }else{
+            service.splice(service.indexOf(e),1);
+        }
+    }
+
     return (
         <div>
             <Head>
                 <title>Appointments</title>
             </Head>
-            <div className="container bg-success p-2 text-dark bg-opacity-10">
+
+            <section class="page-section">
+                { status==200 ? 
+                status==200?
+            <div class="info-boxes confirmation-message">
+							<div class="info-box-icon">
+								<i class="fa fa-check"></i>
+							</div>
+							<h3 class="info-title ">Confirmation box</h3>
+							Appointment registered succesfully wait for confirmation email. Thank you.
+							<div class="close-button"><i class="fa fa-times"></i></div>
+						</div>:
+                        <div class="info-boxes error-message">
+                        <div class="info-box-icon">
+                            <i class="fa fa-bolt"></i>
+                        </div>
+                        <h3 class="info-title ">Error box</h3>
+                        Appointment registered unsuccesful. Please try again later.
+                        <div class="close-button"><i class="fa fa-times"></i></div>
+                    </div>:<></>
+
+                }
+			<div class="container align-center">
+				<h3 class="section-title bottom-line long font-alt">Book An Procedure<span>We are Open for You</span></h3>
+				<div class="col-md-10 col-md-offset-1 mb-30">
+				</div>
+
+
+				<div class="col-xs-8 col-md-4 mb-30">
+								<div class="news-item alt-2">
+									<div class="news-media">
+										<img src="/images/img-21.jpg" data-at2x="images/news/img-21@2x.jpg" alt />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-4 col-md-2 mb-30">
+								<div class="news-item alt-2 mini mb-30">
+									<div class="news-media">
+										<img src="/images/img-22.jpg" data-at2x="images/news/img-22@2x.jpg" alt />
+									</div>
+								</div>
+								<div class="news-item alt-2 mini">
+									<div class="news-media">
+										<img src="/images/img-23.jpg" data-at2x="images/news/img-23@2x.jpg" alt />
+									</div>
+								</div>
+							</div>
+
+                            <div class="col-lg-6 col-md-8 col-xs-12 ml-5 align-left">
+								<h3 class="serv-title font-alt ">Appointment Form</h3>
+                                </div>
+
+			
+<div className="container bg-success p-2 text-dark bg-opacity-10">
                 <div className='row'>
-                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div className="col-lg-8 col-md-8 col-sm-8 col-xs-12 ">
                         <div className="row">
                             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <h1 className='text-center'>Appointment Form</h1>
                                 <p className='text-center'> Book your appointment to save salon rush.</p>
                                 <form onSubmit={handleSubmit(handleRegistration, handleError)}>
                                     <div className="row">
-                                        <div className="col-md-12 ">
-                                            <label className="control-label" htmlFor="name">Name</label>
-                                            <input type="text" className="form-control" id="name" placeholder="Name" name="name" required={true} {...register('name', registerOptions.name)} />
-                                            <small className="text-danger">
-                                                {errors?.name && errors.name.message}
-                                            </small>
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label className="control-label" htmlFor="phone">phone</label>
-                                            <input type="text" className="form-control" id="phone" name="phone" placeholder="Phone" length="10"  {...register('phone', registerOptions.phone)} />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label className="control-label" htmlFor="email">email</label>
-                                            <input type="email" className="form-control" id="appointment_email" placeholder="Email" name="email" {...register('email', registerOptions.email)} />
-                                        </div>
-                                        <div className="col-md-6">
-                                            <label className="control-label" htmlFor="Subject">Services</label>
-                                            <select name="services" id="services" required={true} className="form-control" {...register('services', registerOptions.services)}>
-                                                <option value="" disabled selected>Select Services</option>
-                                                {props.services.map((service, index) => {
-                                                    return (<option value={service.name} key={service._id}>{service.name}</option>)
-                                                }
-                                                )}
-                                            </select>
-                                        </div>
+                                        
                                         <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div className="form-group">
                                                 <label className="control-label" htmlFor="textarea">Appointment Date</label>
                                                 <input type="date" className="form-control appointment_date" placeholder="Date" name="adate" id='adate' min={new Date().toISOString().split('T')[0]} required={true} {...register('adate', registerOptions.adate)} />
                                             </div>
                                         </div>
-                                        <div className="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                                        <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                                             <div className="form-group">
                                                 <label className="control-label" htmlFor="textarea">Appointment Time</label>
                                                 <input type="time" className="form-control appointment_time" placeholder="Time" name="atime" id='atime' required={true} {...register('atime', registerOptions.atime)} />
                                             </div>
                                         </div>
+                                        <div className="col-md-12 col-sm-12">
+                                                {props.services.map((service, index) => {
+                                                    return (
+                                                        <div class="form-check col-md-6 col-sm-6">
+
+                                                    <input type="checkbox"
+                                                    onClick={(e)=>{
+                                                        checkServices(e.target.value,e.target.checked);
+                                                    }}
+                                                     className='form-check-input' value={service.name} id={service._id} key={service._id} /> <label htmlFor={service._id}>{service.name}</label></div>
+                                                    )
+                                                }
+                                                )}
+                                        </div>
+                                        
+                                        
                                         <div className="col-md-12">
                                             <div className="form-group">
-                                                <button type="submit" id="submit" name="submit" className="btn btn-primary">Book Appointment</button>
+                                                <button type="submit" id="submit" name="submit" className="btn btn-primary button mt-40" disabled={login} >Book Appointment</button>
+                                                <p className='font-weight-bold'>
+                                                    <Link href="/login" ><a>Login</a></Link> &nbsp;
+                                                    or &nbsp;
+                                                    <Link href="/register" ><a>Register</a></Link> &nbsp;
+                                                     
+                                                    to book an Appointment</p>
                                             </div>
                                         </div>
                                     </div>
@@ -122,10 +175,11 @@ function Appointment(props) {
                             </div>
                         </div>
                     </div>
-                    <Image src="/images/appoin.jpg" alt="appointment pic" className='border border-dark' height={400} width={350} />
-
                 </div>
             </div>
+			</div>
+		</section>
+         
         </div>
     )
 }
