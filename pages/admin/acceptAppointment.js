@@ -18,7 +18,9 @@ function AcceptAppointment(props) {
     setData(d.data);
   }
   return (
-    <table className=' container table table-bordered'>
+    <div className='page-section'>
+      <div className="container align-center">
+    <table className='styled-table'>
       <thead>
         <tr>
           <td>Sr.No</td>
@@ -57,6 +59,8 @@ function AcceptAppointment(props) {
         })}
       </tbody>
     </table>
+    </div>
+    </div>
   )
 }
 
